@@ -14,6 +14,7 @@ RUN pip install --no-cache-dir -r frontend_reqs.txt
 
 COPY . /app
 
-EXPOSE 8000 8501
+EXPOSE 8000
 
-CMD uvicorn backend.app:app --host 0.0.0.0 --port 8000 & streamlit run frontend/main.py --server.port 8501 --server.address 0.0.0.0
+# FastAPI backend port 8001 par chalega, aur Streamlit main port 8000 par host hoga
+CMD uvicorn backend.app:app --host 127.0.0.1 --port 8001 & streamlit run frontend/main.py --server.port 8000 --server.address 0.0.0.0

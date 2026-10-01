@@ -8,7 +8,7 @@ st.set_page_config(page_title="Deep Learning Image Classifier", layout="centered
 st.title("🧠 End-to-End Deep Learning Classifier")
 st.write("Upload an image below to get real-time predictions from our PyTorch backend API.")
 
-BACKEND_URL = "http://127.0.0.1:8000/predict"
+BACKEND_URL = "http://127.0.0.1:8001/predict"
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
